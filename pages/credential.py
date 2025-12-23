@@ -9,8 +9,10 @@ class Credentials(Basepage):
     Continue=(By.XPATH,"//input[@id='continue']")
 
     def credentials(self):
+        self.log.info("filling in finish credentials")
         self.type(self.USER,"Asmit")
         self.type(self.Lastname,"kumar")
         self.type(self.Zipcode,"78451")
     def click_continue(self):
+        self.log.info("clicking on continue")
         self.click(self.Continue)

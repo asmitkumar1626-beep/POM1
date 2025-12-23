@@ -6,6 +6,8 @@ class Login(Basepage):
     log_butt=(By.XPATH,"//input[@id='login-button']")
 
     def login(self):
+        self.log.info("typing in the credentials")
         self.type(self.user,"standard_user")
         self.type(self.password,"secret_sauce")
+        self.log.info("clicking on the login button")
         self.click(self.log_butt)

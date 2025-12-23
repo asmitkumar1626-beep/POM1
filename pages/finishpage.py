@@ -8,5 +8,7 @@ class Finish(Basepage):
     Finish=(By.XPATH,"//button[@id='finish']")
 
     def finsh(self):
+        self.log.info("printing the total prices ")
         print(self.get_text(self.TOTAL))
+        self.log.info("clicking finish !")
         self.click(self.Finish)

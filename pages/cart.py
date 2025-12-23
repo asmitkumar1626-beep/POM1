@@ -6,4 +6,5 @@ class CART(Basepage):
     CHECKOUT=(By.XPATH,"//button[@id='checkout']")
 
     def checkout(self):
+        self.log.info("clicking on checkout")
         self.click(self.CHECKOUT)

@@ -12,12 +12,17 @@ class Dashboard(Basepage):
     Cart=(By.XPATH,"//a[@class='shopping_cart_link']")
 
     def add(self):
+        self.log.info("clicking on backpack add to cart")
         self.click(self.BACKPACK)
+        self.log.info("clicking on light add to cart")
         self.click(self.LIGHT)
+        self.log.info("selecting dropdown")
         dropdown=self.wait.until(EC.presence_of_element_located(self.dropdown))
         select=Select(dropdown)
         select.select_by_visible_text("Price (low to high)")
+        self.log.info("clicking on shirt add to cart")
         self.click(self.SHIRT)
     def gotocart(self):
+        self.log.info("clicking on cart")
         self.click(self.Cart)
 
